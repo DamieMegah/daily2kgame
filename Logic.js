@@ -16,7 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const audioPlayer = document.getElementById("audioPlayer");
      const go =  document.getElementById('go');
      const audio = document.getElementById("audioPlayer");
-     
+
+    
+     document.addEventListener('touchmove', function(event) {
+    event.preventDefault();  // Prevent scrolling
+    // Handle touch move
+}, { passive: false });
+    document.addEventListener('touchmove', function(event) {
+    // Your touchmove logic
+}, { passive: false });
+
+
 
     let touched = false;
     let score = 0;
