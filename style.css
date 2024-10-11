@@ -1,0 +1,186 @@
+html {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    font-family: Comicraft MS Neue,;
+    overflow-y: hidden;
+}
+
+.title {
+    font-family: Comicraft MS Neue, cursive;
+    font-size: 2.5rem;
+    position: absolute;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px green;
+    border: .1rem solid green;
+    width: 21.6rem;
+    m
+}
+
+.flag {
+    width: 10%;
+    height: 10%;
+    transform: rotate(-15deg);
+}
+
+.kk {
+    width: 20%;
+    height: 40%;
+    transform: rotate(-55deg);
+    position: absolute;
+    left: 8rem;
+    top: -1rem;
+    animation: pulse 1.5s infinite alternate; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1), rotate(deg); }
+    100% { transform: scale(1.4); }
+}
+
+form {
+    position: absolute;
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    border: .1rem solid green;
+    padding: 2.4rem;
+}
+
+.pname {
+    margin-left: .5rem;
+}
+
+.sound {
+    margin-left: 5rem;
+    font-family: Comicraft MS Neue;
+}
+
+.button1{
+    height: 2rem;
+    width: 8rem;
+    margin: 3rem;
+    color: white;
+    background: green;
+    text-decoration:none;
+    font-family:Monospace;
+}
+
+h6 {
+    position: absolute;
+    top: 38rem;
+    font-family: Comicraft MS Neue;
+    left: 10rem;
+}
+
+#follower {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    pointer-events: none;
+    transition: left 0.1s, top 0.1s;
+}
+
+#dot {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    border-radius: 50%;
+    transition: left 0.1s, top 0.1s;
+}
+
+#body {
+    margin: 1rem;
+    
+}
+
+#won img {
+    box-shadow: -8px 10px 8px;
+    z-index: 10;
+    width: 22rem;
+    color :black;
+}
+
+#won .hard {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+ #won {
+      position: absolute;
+      left: 2rem; 
+      overflow: hidden; 
+      transition: left 0.5s; 
+      top: 10rem; 
+      font-family: 'Trebuchet MS';
+      font-size: bolder;
+      color: green;
+      animation: pulse 1.5s infinite alternate; 
+      display:none;
+      
+    }
+
+#won .hard button {
+    width: 4rem;
+    height: 2rem;
+    margin: 3rem;
+    color: white;
+    background: green;
+    text-decoration:none;
+    font-family:Monospace;
+    
+}
+ 
+
+#btn{
+    display:flex;
+    flex-direction:row;
+    position:absolute;
+    top:30rem;
+    display:flex;
+    
+    
+    
+}
+
+#btn h3{
+    font-family:sans;
+    font-size :1.3rem;
+    margin :0rem;
+    z-index:200;
+    
+    
+}
+
+.congrat {
+    width: 6rem;
+    height: 1.4rem;
+    margin: 3rem;
+    padding:.2rem;
+    Border:.1rem solid black;
+    color: white;
+    background: green;
+    text-decoration:none;
+    font-family:Monospace;
+    font-size:1rem;
+    text-align:center;
+    
+    
+}
+
+
+
+#home {
+    Position:absolute ;
+    top:-15rem;
+    width: auto;
+    height: auto;
+    display: none;
+    margin-top: 0rem;
+    z-index: 100;
+}

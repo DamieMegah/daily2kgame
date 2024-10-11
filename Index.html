@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily 2K</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Home Page Section -->
+    <div id="homePage">
+        <h2 class="title">
+            <img class="flag" src="flag.jpg" alt="flag">
+            <img class="kk" src="2k.jpeg" alt="2k">
+            Hustle 4 Daily&nbsp;2K
+        </h2>
+        
+        <div class="container">
+            <form id="difficultyForm">
+                <span class="pname">
+                    <label for="name" class="name">Name</label>
+                    <input type="text" placeholder="Hustler" required>
+                </span>
+                <span>
+                    <label for="difficulty" class="name">Regime</label>
+                    <input id="difficulty" list="options" placeholder="Choose shege" required>
+                    <datalist id="options">
+                        <option value="Yar''Adua">Normal</option>
+                        <option value="GEJ">Hardship</option>
+                        <option value="BuBu">Sapa</option>
+                        <option value="Tpain">Shege Pro Max</option>
+                    </datalist>
+                </span>
+                <span class="sound">
+    <h4>Sound?</h4>
+    <label class="name">ON</label>
+    <input type="radio" name="radio" id="playRadio" onchange="toggleMusic('play')">
+    <label class="name">OFF</label>
+    <input type="radio" name="radio" id="pauseRadio" onchange="toggleMusic('pause')">
+</span>
+
+<audio id="audioPlayer" src="satan.mp3"></audio>
+  <audio id="backgroundMusic" loop>
+                    <source src="satan.mp3" type="audio/mpeg">
+                </audio>
+                <button class="button1" type="submit" id="startButton">Start&nbsp;Hustling</button>
+            </form>
+            <h6>DamiMegah&trade; 2024</h6>
+        </div>
+    </div>
+
+    <!-- Game Section -->
+    <div id="gameSection" style="display: none;">
+        <div id="body">
+            <div id="follower"><img src="hand.gif" alt="hand"></div>
+            <div id="dot"><img src="200.jpeg" alt="2h" width="50px"></div>
+        </div>
+        
+        <div id="won">
+    <h1>Shaaaarrrrppp!!! Now Now</h1>
+    <h2>You Don Grab #<span id="scoreDisplay">00</span> Try Grab Your 2k Complete No Dull🤗</h2>
+    
+    
+    <img src="200.jpeg" alt="pic">
+    <div class="hard">
+        <button id="goHome">Go&nbsp;Home😭</button> 
+        <h4>OR</h4>
+        <button id="goHard">Go&nbsp;Hard💪</button>  
+    </div>
+    <audio id="runAudio" src="run.mp3" style="display: none;" autoplay></audio>
+    
+    
+   <audio loop autoplay id="go" src="go.mp3" style="display: none;"></audio>
+</div>
+
+        
+        <div id="congratulations" style="display: none; color: green; font-weight: bold;">
+            <h2>You Don Escaped Sapa🤑 OYA Go Warm Eba Chop🥱. <br>Time: <span style="color:gold;" id="timeTaken">45</span> hrs</h2>
+            <h3>Regime: <span id="difficultyLevel"></span></h3>
+            <img src="win2k.jpeg" alt="success image">
+            <img src="dance.gif" alt="success image">
+            <img src="doge.gif" alt="success image">
+        </div>
+
+   <div id="btn" style="display: none;">                 
+            <video id="home">
+                    <p>YOU DON'T HAVE A FUTURE HERE, BETTER JAPA ASAP😂😂😂</p>
+ 
+                <source src="make.mp4" type="video/mp4" autoplay>
+            </video>
+            
+            <a href="index.html" id="congrat" class="congrat">Home</a>
+            
+            <a href="#gameSection" id="congrats" class="congrat">Go&nbsp; Again</a>
+            
+            
+            <audio id="escapeAudio" src="Eba.mp3" style="display: none;"></audio>
+            <audio loop autoplay id="homeAudio" src="chtai.mp3" style="display: none;"></audio>
+        </div>
+    
+    
+    <script>
+        document.getElementById('difficultyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Hide home page and show game section
+            document.getElementById('homePage').style.display = 'none';
+            document.getElementById('gameSection').style.display = 'block';
+
+            // Add state to history
+            history.pushState({ game: true }, 'Game', '');
+        });
+
+        window.onpopstate = function(event) {
+            if (event.state && event.state.game) {
+                // If we're in the game section, return to home page
+                document.getElementById('gameSection').style.display = 'block';
+                
+ document.getElementById('btn').style.display = 'none';               
+                document.getElementById('homePage').style.display = 'block';
+            }
+        };
+    </script>
+    <script src="logic.js"></script>
+</body>
+</html>
